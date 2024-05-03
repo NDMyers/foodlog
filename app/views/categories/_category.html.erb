@@ -1,13 +1,13 @@
-<div id="<%= dom_id category %>">
-  <div class="flex flex-row my-5">
+<div id="<%= dom_id category %>" class="flex flex-col w-full">
+  <div class="flex flex-row mt-5 bg-slate-100 p-4 rounded-xl">
     <p class="block font-medium mr-1">Title:</p>
     <%= category.title %>
   </div>
 
-  <div class="flex justify-evenly items-center">
+  <div class="flex justify-evenly items-center text-md tracking-tight text-blue-400">
     <% if action_name != "show" %>
-      <%= link_to "View", category, class: "rounded-lg py-3 px-5 bg-blue-100 inline-block font-medium hover:bg-blue-200" %>
-      <%= link_to "Edit", edit_category_path(category), class: "rounded-lg py-3 ml-2 px-5 bg-blue-100 inline-block font-medium hover:bg-blue-200" %>
+      <%= link_to "View", category, class: "px-5 hover:text-blue-600" %>
+      <%= link_to "Edit", edit_category_path(category), class: "py-3 ml-2 px-5 hover:text-blue-600" %>
     <% end %>
   </div>
 </div>

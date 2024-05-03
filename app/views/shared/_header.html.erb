@@ -19,17 +19,13 @@
     <% end %>
 
     <div class="hidden sm:flex sm:visible items-center justify-evenly w-full max-w-[30rem]">
-      <span class="lg:px-6 rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-        <%= link_to "New entry", new_entry_path %>
-      </span>
 
-      <span class="lg:px-6 rounded-md bg-white px-2 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">
-        <%= link_to "Categories", categories_path %>
-      </span>
+      <%= link_to "New entry", new_entry_path, class:"lg:px-6 rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"%>
 
-      <span class="lg:px-6 rounded-md bg-white px-2 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">
-        <%= link_to "View all entries", archives_index_path %>
-      </span>
+      <%= link_to "Categories", categories_path, class: "lg:px-6 rounded-md bg-white px-2 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200"%>
+
+      <%= link_to "View all entries", archives_index_path, class:"lg:px-6 rounded-md bg-white px-2 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200" %>
+      
       </div>
   </div>
 </div>

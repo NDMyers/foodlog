@@ -1,14 +1,14 @@
-<div class="w-full flex flex-col">
+<%= content_for :title do %>
+  <p>Categories</p>
+<% end %>
+
+<div class="w-full flex items-center flex-col">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-2xl sm:text-4xl">Categories</h1>
-    <%= link_to "New category", new_category_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
-  <div id="categories" class="min-w-full">
+  <div id="categories" class="mx-4 lg:max-w-full">
     <%= render @categories %>
+    <%= link_to "New category", new_category_path, class: "text-center max-w-40 my-12 rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 </div>
