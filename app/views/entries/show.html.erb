@@ -1,0 +1,21 @@
+<% content_for :title do %>
+  <%= @entry.meal_type %> &ndash; <%= DateTime.now.to_fs(:nice_date) %>
+<% end %>
+
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= render @entry %>
+    
+    <div class="flex items-center justify-evenly" >
+      <%= link_to "Back", entries_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100  font-medium hover:bg-gray-200" %>
+      <%= link_to "Edit", edit_entry_path(@entry), class: "ml-2 rounded-lg py-3 px-5 bg-blue-100 font-medium hover:bg-blue-200" %>
+      <div class="ml-2">
+        <%= button_to "Delete", entry_path(@entry), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } } , class: "rounded-lg py-3 px-5 bg-red-100 font-medium hover:bg-red-200" %>
+      </div>
+    </div>
+  </div>
+</div>

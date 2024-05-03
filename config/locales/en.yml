@@ -29,3 +29,8 @@
 
 en:
   hello: "Hello world"
+  # Overrides default 'Create [model-name] / Update [model-name]' output for form.submit
+  helpers: 
+    submit:
+      create: "Create"
+      update: "Update"

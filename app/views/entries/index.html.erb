@@ -1,0 +1,13 @@
+<%= content_for :title do %>
+  Log &ndash; <%= DateTime.now.to_fs(:nice_date) %>
+<% end %>
+
+<div class="w-full flex flex-col items-center">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div id="entries" class="max-w-[20rem] mx-4 lg:max-w-full">
+    <%= render @entries %>
+  </div>
+</div>

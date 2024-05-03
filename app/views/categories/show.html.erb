@@ -1,0 +1,21 @@
+<% content_for :title do %>
+  <p>Categories Menu</p>
+<% end %>
+
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= render @category %>
+    
+    <div class="flex items-center justify-evenly" >
+      <%= link_to "Back", categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100  font-medium hover:bg-gray-200" %>
+      <%= link_to "Edit", edit_category_path(@category), class: "ml-2 rounded-lg py-3 px-5 bg-blue-100 font-medium hover:bg-blue-200" %>
+      <div class="ml-2">
+        <%= button_to "Delete", category_path(@category), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } } , class: "rounded-lg py-3 px-5 bg-red-100 font-medium hover:bg-red-200" %>
+      </div>
+    </div>
+  </div>
+</div>
